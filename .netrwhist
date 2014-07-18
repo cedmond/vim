@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/craig.edmond/Dropbox (finalsite)/_PROJECTS_/notredamepa/fs-build'
-let g:netrw_dirhist_2='/Users/craig.edmond/Dropbox (finalsite)/_PROJECTS_/notredamepa/fs-build/html-snippets'
