@@ -14,6 +14,11 @@ set wrap
 set linebreak
 set textwidth=0
 set wrapmargin=0
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+colorscheme monokai
 
 iab bg: background:
 iab bc: background-color:
