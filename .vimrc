@@ -42,13 +42,14 @@ iab pa: position:absolute;
 iab pr: position:relative;
 iab h_ h1,h2,h3,h4,h5,h6
 
-" smash escape
-inoremap jk <esc>
-inoremap kj <esc>
 
 " change cursor position in insert mode
 inoremap <C-h> <left>
 inoremap <C-l> <right>
+
+inoremap { {}<ESC>i
+inoremap ( ()<ESC>i
+inoremap < <><ESC>i
 
 map <F3> :!pbcopy<CR>u
 map <F4> :.!pbpaste<CR>
