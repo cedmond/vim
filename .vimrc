@@ -13,9 +13,10 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
 syntax enable
-"set number
-set ignorecase
+
+set number  
 set cursorline
+set ignorecase
 set wrap
 set linebreak
 set textwidth=0
@@ -26,14 +27,22 @@ set softtabstop=4
 set splitbelow
 set splitright
 
+:autocmd WinEnter * :setlocal number
+:autocmd WinLeave * :setlocal nonumber
+
+:autocmd WinEnter *  :setlocal cursorline
+:autocmd WinLeave * :setlocal nocursorline
+
 "= light color schemes ="
 "colorscheme mac_classic
 "colorscheme lightcolors
 "colorscheme hemisu
 
-colorscheme jellybeans
+"colorscheme jellybeans
 "colorscheme monokai
 "colorscheme redonly
+"colorscheme 256-grayvim
+colorscheme badwolf
 
 iab bg: background:
 iab bc: background-color:
@@ -46,6 +55,9 @@ iab h_ h1,h2,h3,h4,h5,h6
 " change cursor position in insert mode
 inoremap <C-h> <left>
 inoremap <C-l> <right>
+"inoremap >< <ESC>T<ywwa></<ESC>pa><ESC>F>a
+
+inoremap { {<CR>}<ESC>O
 
 map <F3> :!pbcopy<CR>u
 map <F4> :.!pbpaste<CR>
@@ -55,4 +67,6 @@ map <F4> :.!pbpaste<CR>
 :vmap si "zdi<em><C-R>z</em><Esc>
 
 command W :w
-comman WW :w | !git status
+command WW :w | !git status
+command Q :q!
+
