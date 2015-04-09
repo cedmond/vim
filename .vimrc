@@ -8,6 +8,7 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+"move generated directories
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
@@ -15,8 +16,15 @@ set undodir=~/.vim/undo//
 syntax enable
 
 set number  
+:autocmd WinEnter * :setlocal number
+:autocmd WinLeave * :setlocal nonumber
+
 set cursorline
+:autocmd WinEnter *  :setlocal cursorline
+:autocmd WinLeave * :setlocal nocursorline
+
 set ignorecase
+
 set wrap
 set linebreak
 set textwidth=0
@@ -24,25 +32,31 @@ set wrapmargin=0
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+
+
 set splitbelow
 set splitright
 
-:autocmd WinEnter * :setlocal number
-:autocmd WinLeave * :setlocal nonumber
+" Don't continue comment mark after press 'o' when youre on a commented line
+set formatoptions -=cro
 
-:autocmd WinEnter *  :setlocal cursorline
-:autocmd WinLeave * :setlocal nocursorline
+" set 256 color terminal
+set t_Co=256
 
 "= light color schemes ="
+"set background=light
 "colorscheme mac_classic
 "colorscheme lightcolors
 "colorscheme hemisu
 
+"= dark color schemes ="
+set background=dark
 "colorscheme jellybeans
-"colorscheme monokai
+colorscheme monokai
 "colorscheme redonly
 "colorscheme 256-grayvim
-colorscheme badwolf
+"colorscheme badwolf
+"colorscheme gotham
 
 iab bg: background:
 iab bc: background-color:
@@ -57,7 +71,8 @@ inoremap <C-h> <left>
 inoremap <C-l> <right>
 "inoremap >< <ESC>T<ywwa></<ESC>pa><ESC>F>a
 
-inoremap { {<CR>}<ESC>O
+"inoremap { {<CR>}<ESC>O
+inoremap <Leader>{ {<CR>}<ESC>O
 
 map <F3> :!pbcopy<CR>u
 map <F4> :.!pbpaste<CR>
