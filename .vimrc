@@ -13,6 +13,7 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
+set title "change terminal title
 syntax enable
 
 set number  
@@ -22,6 +23,12 @@ set number
 set cursorline
 :autocmd WinEnter *  :setlocal cursorline
 :autocmd WinLeave * :setlocal nocursorline
+
+" change cursor to a '|' when on vim console and insert mode:
+if &term == 'xterm-256color' || &term == 'screen-256color'
+	let &t_SI = "\<Esc>[5 q"
+	let &t_EI = "\<Esc>[1 q"
+endif
 
 set ignorecase
 
@@ -52,11 +59,11 @@ set t_Co=256
 "= dark color schemes ="
 set background=dark
 "colorscheme jellybeans
-colorscheme monokai
+"colorscheme monokai
 "colorscheme redonly
 "colorscheme 256-grayvim
 "colorscheme badwolf
-"colorscheme gotham
+colorscheme gotham256
 
 iab bg: background:
 iab bc: background-color:
