@@ -2,24 +2,27 @@ execute pathogen#infect()
 
 "auto launch NERDTree (uncomment line below)
 "autocmd vimenter * NERDTree
-"close NERDTree if it is the only window
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-"use CTRL-n to toggle NERDTree
-"map <C-n> :NERDTreeToggle<CR>
 
-
-"== setup airline =="
+"setup airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#whitespace#enabled = 0
 
+"move generated directories
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
 
-"== window change settings =="
-"autocmd WinEnter * set number
-"autocmd WinLeave * set nonumber
-autocmd WinEnter * set cursorline
-autocmd WinLeave * set nocursorline
+set title "change terminal title
+syntax enable
+
+set number  
+:autocmd WinEnter * :setlocal number
+:autocmd WinLeave * :setlocal nonumber
+
+set cursorline
+:autocmd WinEnter *  :setlocal cursorline
+:autocmd WinLeave * :setlocal nocursorline
 
 " change cursor to a '|' when on vim console and insert mode:
 if &term == 'xterm-256color' || &term == 'screen-256color'
@@ -49,6 +52,7 @@ set number
 set ignorecase
 set cursorline
 "set hlsearch
+
 set wrap
 set linebreak
 set textwidth=0
