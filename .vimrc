@@ -33,6 +33,7 @@ filetype plugin indent on    " required
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
 
 "move generated directories
 set backupdir=~/.vim/backup//
