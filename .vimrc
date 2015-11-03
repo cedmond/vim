@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugins to load
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdTree'
 Plugin 'ervandew/supertab'
