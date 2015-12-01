@@ -11,16 +11,19 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugins to load
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdTree'
 Plugin 'ervandew/supertab'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'rhysd/committia.vim'
 Plugin 'KabbAmine/gulp-vim'
+Plugin 'mustache/vim-mustache-handlebars'
+
+"colorscheme plugins
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'sickill/vim-monokai'
 
 
 " All of your Plugins must be added before the following line
@@ -126,23 +129,11 @@ set formatoptions-=cro
 "set 256 color terminal
 "set t_Co=256
 
+"set background=light
+"colorscheme solarized
+
 set background=dark
-colorscheme solarized
-
-"= light color schemes ="
-"colorscheme mac_classic
-"colorscheme lightcolors
-"colorscheme hemisu
-
-"= dark color schemes ="
-"colorscheme jellybeans
-"colorscheme monokai
-"colorscheme redonly
-"colorscheme 256-grayvim
-"colorscheme 256-jungle
-"colorscheme badwolf
-"colorscheme gotham256
-
+colorscheme desertEx
 
 "change cursor line (no underline ever)
 "hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
@@ -156,7 +147,7 @@ iab pa: position:absolute;
 iab pr: position:relative;
 iab h_ h1,h2,h3,h4,h5,h6
 
-inoremap { {<CR>}<ESC>O
+inoremap { { }<ESC>hcl
 inoremap @m @media(max-width:){<CR><CR>}<ESC>?:<CR><C-l>a
 inoremap @i @include
 "inoremap " ""<ESC>i
@@ -179,3 +170,4 @@ map U <C-r>
 
 command W :w
 command Q :q!
+command E :Ex
