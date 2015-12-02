@@ -21,6 +21,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'rhysd/committia.vim'
 Plugin 'KabbAmine/gulp-vim'
+Plugin 'Townk/vim-autoclose'
 
 
 " All of your Plugins must be added before the following line
