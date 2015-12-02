@@ -25,6 +25,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 "colorscheme plugins
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'sickill/vim-monokai'
+Plugin 'vim-scripts/desertEx'
 
 
 " All of your Plugins must be added before the following line
