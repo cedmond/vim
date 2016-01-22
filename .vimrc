@@ -21,11 +21,13 @@ Plugin 'rhysd/committia.vim'
 Plugin 'KabbAmine/gulp-vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'pelodelfuego/vim-swoop'
 
 "colorscheme plugins
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'sickill/vim-monokai'
 Plugin 'vim-scripts/desertEx'
+Plugin 'ewilazarus/preto'
 
 
 " All of your Plugins must be added before the following line
@@ -69,8 +71,8 @@ set title "change terminal title
 syntax enable
 
 set number  
-:autocmd WinEnter * :setlocal number
-:autocmd WinLeave * :setlocal nonumber
+":autocmd WinEnter * :setlocal number
+":autocmd WinLeave * :setlocal nonumber
 
 set cursorline
 :autocmd WinEnter *  :setlocal cursorline
@@ -135,7 +137,8 @@ set formatoptions-=cro
 "colorscheme solarized
 
 set background=dark
-colorscheme desertEx
+"colorscheme desertEx
+colorscheme preto
 
 "change cursor line (no underline ever)
 "hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
@@ -148,6 +151,8 @@ iab trans transparent
 iab pa: position:absolute;
 iab pr: position:relative;
 iab h_ h1,h2,h3,h4,h5,h6
+iab datehdr <ESC>:r!date<CR>i
+
 
 inoremap { { }<ESC>hcl
 inoremap @m @media(max-width:){<CR><CR>}<ESC>?:<CR><C-l>a
@@ -165,6 +170,8 @@ nnoremap <Leader>n :NERDTreeFocus<CR>
 nnoremap <Leader>t :tabe<CR>:E<CR>
 nnoremap <Leader>v :vs<CR>:E<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>l :call Swoop()<CR>
 
 map <F3> :!pbcopy<CR>u
 map <F4> :.!pbpaste<CR>
