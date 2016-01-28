@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -67,7 +68,7 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
-set title "change terminal title
+"set title "change terminal title
 syntax enable
 
 set number  
@@ -96,17 +97,12 @@ set ff=unix
 "set leader to spacebar
 let mapleader = "\<Space>"
 
-"reset vim folders
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
-set undodir=~/.vim/undo//
 
-syntax enable
-set number
+"search stuff
 set ignorecase
-set cursorline
 "set hlsearch
 
+"wrapping
 set wrap
 set linebreak
 set textwidth=0
@@ -140,8 +136,6 @@ set background=dark
 "colorscheme desertEx
 colorscheme preto
 
-"change cursor line (no underline ever)
-"hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
 
 
 "== Autocompletions =="
@@ -154,7 +148,7 @@ iab h_ h1,h2,h3,h4,h5,h6
 iab datehdr <ESC>:r!date<CR>i
 
 
-inoremap { { }<ESC>hcl
+"inoremap { { }<ESC>hcl
 inoremap @m @media(max-width:){<CR><CR>}<ESC>?:<CR><C-l>a
 inoremap @i @include
 "inoremap " ""<ESC>i
