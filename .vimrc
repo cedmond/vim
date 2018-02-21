@@ -25,7 +25,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
 "Plugin 'jeetsukumaran/vim-markology'
 Plugin 'kshenoy/vim-signature'
-Plugin 'mileszs/ack.vim'
+Plugin 'rlue/vim-getting-things-down'
+Plugin 'mattn/emmet-vim'
 
 "colorscheme plugins
 Plugin 'altercation/vim-colors-solarized'
@@ -36,6 +37,9 @@ Plugin 'reedes/vim-colors-pencil'
 Plugin 'sjl/badwolf'
 Plugin 'ronny/birds-of-paradise.vim'
 Plugin 'whatyouhide/vim-gotham'
+Plugin 'hzchirs/vim-material'
+Plugin 'gkjgh/cobalt'
+Plugin 'elmindreda/vimcolors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -85,13 +89,6 @@ endfunction
 "set this if there are issues
 "let g:instant_markdown_slow = 1
 
-"configure Ag
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-"set up Ack
-if executable('ag')
-	let g:ackprg = 'ag --vimgrep'
-endif
 
 "move generated directories
 set backupdir=~/.vim/backup//
@@ -113,10 +110,10 @@ set cursorline
 ":autocmd WinLeave * :setlocal nocursorline
 
 " change cursor to a '|' when on vim console and insert mode:
-if &term == 'xterm-256color' || &term == 'screen-256color'
+" if &term == 'xterm-256color' || &term == 'screen-256color'
 	let &t_SI = "\<Esc>[5 q"
 	let &t_EI = "\<Esc>[1 q"
-endif
+" endif
 
 "== set up ctrlp =="
 let g:ctrlp_map = '<C-p>'
@@ -170,17 +167,21 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "set 256 color terminal
 "set t_Co=256
+set termguicolors
 
 " set background=light
 "colorscheme solarized
-" colorscheme pencil
+"colorscheme pencil
 
 set background=dark
 "colorscheme desertEx
 "colorscheme preto
-colorscheme badwolf
+" colorscheme badwolf
 "colorscheme birds-of-paradise
-"colorscheme gotham256
+"colorscheme gotham
+"colorscheme vim-material
+colorscheme monokai
+" colorscheme cobalt
 
 "== Autocompletions =="
 iab bg: background:
@@ -211,3 +212,5 @@ map <F4> :.!pbpaste<CR>
 
 command Vs vs
 command W w 
+command Q q 
+command E Explore 
