@@ -16,7 +16,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdTree'
 Plugin 'ervandew/supertab'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'rhysd/committia.vim'
 Plugin 'KabbAmine/gulp-vim'
@@ -27,6 +28,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'kshenoy/vim-signature'
 Plugin 'rlue/vim-getting-things-down'
 Plugin 'mattn/emmet-vim'
+Plugin 'chrisbra/colorizer'
 
 "colorscheme plugins
 Plugin 'altercation/vim-colors-solarized'
@@ -40,6 +42,7 @@ Plugin 'whatyouhide/vim-gotham'
 Plugin 'hzchirs/vim-material'
 Plugin 'gkjgh/cobalt'
 Plugin 'elmindreda/vimcolors'
+Plugin 'challenger-deep-theme/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,19 +55,27 @@ filetype plugin indent on    " required
 let g:netrw_liststyle= 1
 let g:netrw_banner= 0
 
+
 "set up airline
-set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#whitespace#enabled = 0
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#whitespace#enabled = 0
 
 "statusline
-set statusline=%f "current file
-set statusline+=%{fugitive#statusline()} "git branch
-set statusline+=%=        " Switch to the right side
-set statusline+=%l        " Current line
-set statusline+=/         " Separator
-set statusline+=%L        " Total lines
+set laststatus=2
+
+
+let g:lightline = {
+      \ 'colorscheme': 'default',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
+
 
 "set up committia
 let g:committia_hooks = {}
@@ -180,8 +191,9 @@ set background=dark
 "colorscheme birds-of-paradise
 "colorscheme gotham
 "colorscheme vim-material
-colorscheme monokai
+" colorscheme monokai
 " colorscheme cobalt
+colorscheme challenger_deep
 
 "== Autocompletions =="
 iab bg: background:
