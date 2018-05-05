@@ -211,6 +211,8 @@ inoremap ;; ;<ESC>
 inoremap JJ <ESC>
 inoremap {<CR><CR> {<CR><CR>}<ESC>kcc
 
+"remap emmet completion key
+imap >> <C-y>,
 
 "== Shortcuts keys =="
 nnoremap <Leader>n :NERDTreeFocus<CR>
