@@ -16,7 +16,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdTree'
 Plugin 'ervandew/supertab'
-" Plugin 'bling/vim-airline'
 Plugin 'itchyny/lightline.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'rhysd/committia.vim'
@@ -24,13 +23,12 @@ Plugin 'KabbAmine/gulp-vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
-"Plugin 'jeetsukumaran/vim-markology'
 Plugin 'kshenoy/vim-signature'
-Plugin 'rlue/vim-getting-things-down'
 Plugin 'mattn/emmet-vim'
 Plugin 'chrisbra/colorizer'
 
 "colorscheme plugins
+Plugin 'cedmond/red-only'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'sickill/vim-monokai'
 Plugin 'vim-scripts/desertEx'
@@ -43,6 +41,7 @@ Plugin 'hzchirs/vim-material'
 Plugin 'gkjgh/cobalt'
 Plugin 'elmindreda/vimcolors'
 Plugin 'challenger-deep-theme/vim'
+Plugin 'ryanpcmcquen/true-monochrome_vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -110,7 +109,7 @@ set undodir=~/.vim/undo//
 syntax enable
 
 "set system clipboard
-"set clipboard=unnamed
+set clipboard=unnamed
 
 set number  
 ":autocmd WinEnter * :setlocal number
@@ -182,18 +181,21 @@ set termguicolors
 
 " set background=light
 "colorscheme solarized
-"colorscheme pencil
+" colorscheme pencil
 
 set background=dark
 "colorscheme desertEx
 "colorscheme preto
-" colorscheme badwolf
+"colorscheme badwolf
 "colorscheme birds-of-paradise
 "colorscheme gotham
 "colorscheme vim-material
-" colorscheme monokai
-" colorscheme cobalt
-colorscheme challenger_deep
+"colorscheme monokai
+"colorscheme cobalt
+"colorscheme challenger_deep
+" colorscheme true-monochrome
+colorscheme red_only
+
 
 "== Autocompletions =="
 iab bg: background:
